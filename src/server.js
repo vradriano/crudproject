@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 
+
 const db = require('./database')
 const routes = require('./routes')
 
@@ -20,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', routes)
+app.use('/', routes)
 
 app.get((req, res) => {
   res.send('Página não encontrada')
