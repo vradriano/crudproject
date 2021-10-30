@@ -11,3 +11,6 @@ async function crypto(pwd){
 module.exports = {
   crypto
 }
+
+
+
